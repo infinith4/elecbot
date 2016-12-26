@@ -5,7 +5,7 @@ cronJob = require('cron').CronJob
 child_process = require 'child_process'
 
 module.exports = (robot) ->
-  new cronJob('0 50 6 * * *', () =>
+  new cronJob('0 15 8 * * *', () =>
     roomIds = process.env.HUBOT_CHATWORK_ROOMS.split(",")
     err = ""
     output = ""
@@ -22,5 +22,5 @@ module.exports = (robot) ->
           console.log(output)
           robot.send envelope, output
         else
-          robot.send envelope,"occur error"
+          #robot.send envelope,"occur error"
   ).start()

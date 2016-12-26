@@ -29,6 +29,6 @@ module.exports = (robot) ->
       # accountId = msg.message.user.id
       if(today.diff(endofm, 'days') >= -5)  #月末から5日前なら毎日Remindする
         robot.send envelope, '月末です。交通費精算、勤務表など忘れずに。';
-        robot.send envelope, endofmstr.toString();
+        #robot.send envelope, endofmstr.toString();
         console.log endofmstr.toString();
   ).start()

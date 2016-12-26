@@ -26,3 +26,9 @@ module.exports = (robot) ->
 
   robot.hear /あなたは誰/i, (msg) ->
     msg.send "私はelecbot"
+
+  robot.respond /\(y\)/i, (msg) ->
+    msg.send "(y)"
+
+  robot.respond /\:\)/i, (msg) ->
+    msg.send ":)"
